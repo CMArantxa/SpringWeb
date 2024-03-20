@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet"  th:href="@{/css/index.css}">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<img src="/images/mola.jpg" alt="">
+
+<form action="" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Usuario" name="usuario" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+</form>
+<div th:if="${msg}">
+    <p>Usuario o Contraseña incorrecto</p>
+</div>
+<button id="btnPedirDatos">Pedir Datos</button>
+<ul id="lista"></ul>
+<hr>
+
+<input type="number" name="" id="idalumno" placeholder="idalumno">
+<input type="text" name="" id="nombre" placeholder="nombre">
+<input type="text" name="" id="apellido" placeholder="apellido">
+<input type="number" name="" id="edad" placeholder="edad">
+<button id="btnEnviarAlumno">Enviar Alumno </button>
+
+<hr>
+
+
+
+<form action="tarea" method="post">
+    <div class="form-group">
+        <label for="idtarea">idTarea</label>
+        <input type="number" class="form-control" id="idtarea" placeholder="idTarea" name="id" required>
+    </div>
+    <div class="form-group">
+        <label for="titulo">titulo</label>
+        <input type="text" class="form-control" id="titulo" placeholder="titulo" name="titulo" required>
+    </div>
+    <div class="form-group">
+        <label for="descripcion">descripcion</label>
+        <input type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion" required>
+    </div>
+    <div class="form-group">
+        <label for="fecha">fecha</label>
+        <input type="date" class="form-control" id="fecha" placeholder="fecha" name="fecha" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">ADD</button>
+</form>
+</body>
+</html>
